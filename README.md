@@ -22,27 +22,26 @@
 * @param: outputLevel：日志输出的级别，只有等于或者高于该级别的日志输出到文件
 * @return: 
 */
-void  RtmpPlayer_Enviroment_Init(const char * outputPath,  LOG_OUTPUT_LEVEL outputLevel);
+###void  RtmpPlayer_Enviroment_Init(const char * outputPath,  LOG_OUTPUT_LEVEL outputLevel);
 
 /***
 * 环境反初始化，系统只需调用一次
 * @return: 
 */
-
-void  RtmpPlayer_Enviroment_Free();
+###void  RtmpPlayer_Enviroment_Free();
 
 /***
 * 创建RtmpPlayer
 * @return: 返回模块指针，为NULL则失败
 */
-void*  RtmpPlayer_Create();
+###void*  RtmpPlayer_Create();
 
 /***
 * 销毁RtmpPlayer,注意：【涉及到资源销毁，使用者应该做好本接口与其他接口的互斥保护】
 * @param pRtmpPlayer: 模块指针
 * @return: 
 */
-void  RtmpPlayer_Delete(void* pRtmpPlayer);
+###void  RtmpPlayer_Delete(void* pRtmpPlayer);
 
 /***
 * 开始拉流Rtmp并播放
@@ -52,7 +51,7 @@ void  RtmpPlayer_Delete(void* pRtmpPlayer);
 * @param pDisplayHandle: 渲染输出的窗口句柄
 * @return: TURE成功，FALSE失败
 */
-BOOL  RtmpPlayer_Start(void* pRtmpPlayer, char *strRtmpPlayUrl, UINT unJitterBuffDelay, void* pDisplayHandle);
+###BOOL  RtmpPlayer_Start(void* pRtmpPlayer, char *strRtmpPlayUrl, UINT unJitterBuffDelay, void* pDisplayHandle);
 
 
 /***
@@ -60,7 +59,7 @@ BOOL  RtmpPlayer_Start(void* pRtmpPlayer, char *strRtmpPlayUrl, UINT unJitterBu
 * @param pRtmpPlayer: 模块指针
 * @return: 
 */
-void  RtmpPlayer_Stop(void* pRtmpPlayer);
+###void  RtmpPlayer_Stop(void* pRtmpPlayer);
 
 
 /***
@@ -68,4 +67,4 @@ void  RtmpPlayer_Stop(void* pRtmpPlayer);
 * @param pRtmpPlayer: 模块指针
 * @return: RTMP连接状态
 */
-RtmpPlay_Status  RtmpPlayer_GetRtmpStatus(void* pRtmpPlayer);
+###RtmpPlay_Status  RtmpPlayer_GetRtmpStatus(void* pRtmpPlayer);
