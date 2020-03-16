@@ -17,45 +17,46 @@
 
 ## RtmpPlaySdk  C API
 
+### 
 * 环境初始化，系统只需调用一次
 * @param: outputPath：日志文件输出的目录，若目录不存在将自动创建
 * @param: outputLevel：日志输出的级别，只有等于或者高于该级别的日志输出到文件
 * @return: 
-### void  RtmpPlayer_Enviroment_Init(const char * outputPath,  LOG_OUTPUT_LEVEL outputLevel);
+void  RtmpPlayer_Enviroment_Init(const char * outputPath,  LOG_OUTPUT_LEVEL outputLevel);
 
-
+### 
 * 环境反初始化，系统只需调用一次
 * @return: 
-### void  RtmpPlayer_Enviroment_Free();
+void  RtmpPlayer_Enviroment_Free();
 
-
+### 
 * 创建RtmpPlayer
 * @return: 返回模块指针，为NULL则失败
-### void*  RtmpPlayer_Create();
+void*  RtmpPlayer_Create();
 
-
+### 
 * 销毁RtmpPlayer,注意：【涉及到资源销毁，使用者应该做好本接口与其他接口的互斥保护】
 * @param pRtmpPlayer: 模块指针
 * @return: 
-### void  RtmpPlayer_Delete(void* pRtmpPlayer);
+void  RtmpPlayer_Delete(void* pRtmpPlayer);
 
-
+### 
 * 开始拉流Rtmp并播放
 * @param pRtmpPlayer: 模块指针
 * @param strRtmpPlayUrl: Rtmp地址
-* @param unJitterBuffDelay: 内部缓存时间，缓存时间越大延时越大、流畅性越好。反之延时越小，流畅性越差。范围[0, 2000]，单位毫秒
+* @param unJitterBuffDelay: 内部缓存时间，缓存时间越大延时越大、流畅性越好。反之延时越小，流畅性越差。范围[0, 4000]，单位毫秒
 * @param pDisplayHandle: 渲染输出的窗口句柄
 * @return: TURE成功，FALSE失败
-### BOOL  RtmpPlayer_Start(void* pRtmpPlayer, char *strRtmpPlayUrl, UINT unJitterBuffDelay, void* pDisplayHandle);
+BOOL  RtmpPlayer_Start(void* pRtmpPlayer, char *strRtmpPlayUrl, UINT unJitterBuffDelay, void* pDisplayHandle);
 
-
+### 
 * 停止拉流Rtmp播放
 * @param pRtmpPlayer: 模块指针
 * @return: 
-### void  RtmpPlayer_Stop(void* pRtmpPlayer);
+void  RtmpPlayer_Stop(void* pRtmpPlayer);
 
-
+### 
 * 获取RTMP连接状态
 * @param pRtmpPlayer: 模块指针
 * @return: RTMP连接状态
-### RtmpPlay_Status  RtmpPlayer_GetRtmpStatus(void* pRtmpPlayer);
+RtmpPlay_Status  RtmpPlayer_GetRtmpStatus(void* pRtmpPlayer);
