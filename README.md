@@ -60,3 +60,5 @@
 * @param pRtmpPlayer: 模块指针
 * @return: RTMP连接状态
 * RtmpPlay_Status  RtmpPlayer_GetRtmpStatus(void* pRtmpPlayer);
+
+### 本库仅做演示用途，若需要商业版本请联系 www.mediapro.cc
