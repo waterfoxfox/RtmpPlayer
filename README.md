@@ -18,47 +18,47 @@
 ## RtmpPlaySdk  C API
 
 ### 
-* 环境初始化，系统只需调用一次\<br>
-@param: outputPath：日志文件输出的目录，若目录不存在将自动创建\<br>
-@param: outputLevel：日志输出的级别，只有等于或者高于该级别的日志输出到文件\<br>
-@return: \<br>
+* 环境初始化，系统只需调用一次<br>
+@param: outputPath：日志文件输出的目录，若目录不存在将自动创建<br>
+@param: outputLevel：日志输出的级别，只有等于或者高于该级别的日志输出到文件<br>
+@return: <br>
 void  `RtmpPlayer_Enviroment_Init`(const char * outputPath,  LOG_OUTPUT_LEVEL outputLevel);
 
 ### 
-* 环境反初始化，系统只需调用一次\<br>
-@return: \<br>
+* 环境反初始化，系统只需调用一次<br>
+@return:<br>
 void  `RtmpPlayer_Enviroment_Free`();
 
 ### 
-* 创建RtmpPlayer\<br>
-@return: 返回模块指针，为NULL则失败\<br>
+* 创建RtmpPlayer<br>
+@return: 返回模块指针，为NULL则失败<br>
 void*  `RtmpPlayer_Create`();
 
 ### 
-* 销毁RtmpPlayer,注意：【涉及到资源销毁，使用者应该做好本接口与其他接口的互斥保护】\<br>
-@param pRtmpPlayer: 模块指针\<br>
-@return: \<br>
+* 销毁RtmpPlayer,注意：【涉及到资源销毁，使用者应该做好本接口与其他接口的互斥保护】<br>
+@param pRtmpPlayer: 模块指针<br>
+@return: <br>
 void  `RtmpPlayer_Delete`(void* pRtmpPlayer);
 
 ### 
-* 开始拉流Rtmp并播放\<br>
-@param pRtmpPlayer: 模块指针\<br>
-@param strRtmpPlayUrl: Rtmp地址\<br>
-@param unJitterBuffDelay: 内部缓存时间，缓存时间越大延时越大、流畅性越好。反之延时越小，流畅性越差。范围[0, 4000]，单位毫秒\<br>
-@param pDisplayHandle: 渲染输出的窗口句柄\<br>
-@return: TURE成功，FALSE失败\<br>
+* 开始拉流Rtmp并播放<br>
+@param pRtmpPlayer: 模块指针<br>
+@param strRtmpPlayUrl: Rtmp地址<br>
+@param unJitterBuffDelay: 内部缓存时间，缓存时间越大延时越大、流畅性越好。反之延时越小，流畅性越差。范围[0, 4000]，单位毫秒<br>
+@param pDisplayHandle: 渲染输出的窗口句柄<br>
+@return: TURE成功，FALSE失败<br>
 BOOL  `RtmpPlayer_Start`(void* pRtmpPlayer, char *strRtmpPlayUrl, UINT unJitterBuffDelay, void* pDisplayHandle);
 
 ### 
-* 停止拉流Rtmp播放\<br>
-@param pRtmpPlayer: 模块指针\<br>
-@return: \<br>
+* 停止拉流Rtmp播放<br>
+@param pRtmpPlayer: 模块指针<br>
+@return: <br>
 void  `RtmpPlayer_Stop`(void* pRtmpPlayer);
 
 ### 
-* 获取RTMP连接状态\<br>
-@param pRtmpPlayer: 模块指针\<br>
-@return: RTMP连接状态\<br>
+* 获取RTMP连接状态<br>
+@param pRtmpPlayer: 模块指针<br>
+@return: RTMP连接状态<br>
 RtmpPlay_Status  `RtmpPlayer_GetRtmpStatus`(void* pRtmpPlayer);
 
 ### 
