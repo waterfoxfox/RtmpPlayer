@@ -47,7 +47,7 @@
 * @param unJitterBuffDelay: 内部缓存时间，缓存时间越大延时越大、流畅性越好。反之延时越小，流畅性越差。范围[0, 4000]，单位毫秒
 * @param pDisplayHandle: 渲染输出的窗口句柄
 * @return: TURE成功，FALSE失败
-* BOOL  RtmpPlayer_Start(void* pRtmpPlayer, char *strRtmpPlayUrl, UINT unJitterBuffDelay, void* pDisplayHandle);
+* BOOL  <font face="黑体">RtmpPlayer_Start</font>(void* pRtmpPlayer, char *strRtmpPlayUrl, UINT unJitterBuffDelay, void* pDisplayHandle);
 
 ### 
 * 停止拉流Rtmp播放
