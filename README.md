@@ -15,6 +15,7 @@
 * 9、整个系统仅由一个DLL组成，占用空间小。性能强劲，单路720P 30fps在i5 CPU上占用率5%以内。
 * 10、C++开发，支持C、C++、C#
 
+### Android版本: https://github.com/waterfoxfox/RtmpPlayer-Android
 
 ## RtmpPlaySdk  C API
 
