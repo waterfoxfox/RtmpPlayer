@@ -2,7 +2,7 @@
 
 
 ## RtmpPlaySdk简介
-近期将项目上RTMP播放相关功能进行打包整理，实现了一款低延时的极简接口RTMP播放器（Windows版和Android版）。市面上的RTMP播放器较多，有开源的ijkplayer及其衍生品，也有收费的功能繁多的播放器，适合自己的才是最好的，其中Windows版播放器的特性如下：
+一款低延时的极简接口RTMP播放器（Windows版和Android版）。其中Windows版播放器的特性如下：
 
 * 1、支持Rtmp掉线自动重连。
 * 2、支持非阻塞Rtmp连接，外层可随时中断。
@@ -66,4 +66,4 @@ RtmpPlay_Status  `RtmpPlayer_GetRtmpStatus`(void* pRtmpPlayer);
 ### 
 应用案例：i8财经直播 http://www.i8zhibo.cn/
 
-### 本库可免费使用，若需要定制服务与技术支持请联系 www.mediapro.cc
+### 本库仅做演示用途，若需要商用或定制服务请联系 www.mediapro.cc
