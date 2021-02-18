@@ -121,6 +121,15 @@ DLLIMPORT void  RtmpPlayer_SetVolume(void* pRtmpPlayer, int nVolume);
 
 
 /***
+* 设置渲染模式，不调用本API时，默认为填充黑边模式。本API在Start接口成功之后调用
+* @param pRtmpPlayer: 模块指针
+* @param nDisplayMode: 范围[0, 1]，设置0表示填充黑边以保持宽高比。设置1表示画面铺满窗口
+* @return: TURE成功，FALSE失败
+*/
+DLLIMPORT BOOL  RtmpPlayer_SetDisplayMode(void* pRtmpPlayer, int nDisplayMode);
+
+
+/***
 * 获取RTMP连接状态
 * @param pRtmpPlayer: 模块指针
 * @return: RTMP连接状态

@@ -1,4 +1,4 @@
-# Low delay windows rtmp player with simple api and single dll
+# Low delay windows h264 h265 rtmp player with simple api and single dll
 
 
 ## RtmpPlaySdk简介
@@ -8,7 +8,7 @@
 * 2、支持非阻塞Rtmp连接，外层可随时中断。
 * 3、支持多实例
 * 4、支持任意AAC采样率、声道数，内部自动resample，支持音量调节。
-* 5、支持H264+AAC组合Rtmp流，支持同步TS\MP4文件录制。
+* 5、支持H264/H265+AAC组合Rtmp流，支持同步TS\MP4文件录制。
 * 6、支持渲染时保证画面宽高比而自适应加黑边。
 * 7、支持外层可设置的Jitter Buff延时，设置为0时为极速模式，配合低延时推送端最小延时仅500ms。
 * 8、仅六个接口，调用简洁，用户只需传入播放器窗口句柄即可。
@@ -65,5 +65,10 @@ RtmpPlay_Status  `RtmpPlayer_GetRtmpStatus`(void* pRtmpPlayer);
 
 ### 
 应用案例：i8财经直播 http://www.i8zhibo.cn/
+
+### 
+H265 over RTMP采用业内普遍使用的私有标准（SRS、金山云、大牛直播等均采用该标准），使用如下环境测试：<br>
+推送端：ffmpeg补丁版 https://github.com/ossrs/srs/pull/1721#issuecomment-619460847  <br>
+服务器：SRS 4.x https://github.com/ossrs/srs/tree/feature/h265  <br>
 
 ### 本库仅做演示用途，若需要商用或定制服务请联系 www.mediapro.cc
