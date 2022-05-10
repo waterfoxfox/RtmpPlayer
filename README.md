@@ -14,7 +14,7 @@
 * 8、仅六个接口，调用简洁，用户只需传入播放器窗口句柄即可。
 * 9、整个系统仅由一个DLL组成，占用空间小。性能强劲，单路720P 30fps在i5 CPU上占用率5%以内。
 * 10、C++开发，支持C、C++、C#
-* 11、支持WIN7\WIN8\WIN10
+* 11、支持XP\WIN7\WIN8\WIN10
 
 #### Android版本: https://github.com/waterfoxfox/RtmpPlayer-Android
 
